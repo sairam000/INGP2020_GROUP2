@@ -1,0 +1,91 @@
+<!-- <h1>dbhfiukshvgesd</h1> -->
+<h1 style="text-align: center;" >H1B visa application</h1>
+<form (ngSubmit)="onSubmit()">
+
+
+        <div>
+        <label >Applicant Name:</label>
+        <input type="text" class="form-control"  name="name" [(ngModel)]="visaForm.Name" placeholder="Name"><br>
+        </div>
+
+         <div >
+        <label >email:</label>
+        <input type="email" name="email"  class="form-control" [(ngModel)]="visaForm.Email" placeholder="email"><br>
+         </div>
+         
+         
+         <label>gender:</label><br>
+            <input type="radio" name="gender" [(ngModel)]="visaForm.Gender"    value="male"> male
+            <input type="radio" name="gender" [(ngModel)]="visaForm.Gender"  value="female"> Female<br><br>
+
+             <div>
+                  <label>Passport number:</label>
+                  <input type="text"  [(ngModel)]="visaForm.passport_number"  class="form-control"name="passport number" placeholder="passport number"><br>
+              </div>
+              <div>
+                  <label>Country of nationality:</label>
+                  <input type="text" [(ngModel)]="visaForm.country_of_nationality" class="form-control" name="country_of_nationality" placeholder="nationality"><br>
+              </div>
+            
+                  <label>type of visa application: </label><br>
+                  <input type="radio" [(ngModel)]="visaForm.type_of_visa_application" name="type of visa application"  value="single type">single type
+                  <input type="radio" [(ngModel)]="visaForm.type_of_visa_application" name="type of visa application"  value="multilple type">multilple type<br><br>
+            
+              <div>
+                  <label>total fee: </label>
+                  <input type="text" [(ngModel)]="visaForm.total_fee" class="form-control" name="total_fee" placeholder="total fee"><br>
+              </div>
+              <div>
+                  <label>contact language:</label>
+                  <input type="text" [(ngModel)]="visaForm.contact_language" class="form-control"  name="contact_language" placeholder="language"><br>
+
+              </div>
+              <div>
+                  <label>payment reference:</label><br>
+                  <input type="radio" [(ngModel)]="visaForm.payment_reference" name="payment method" value="online">online
+                  <input type="radio" [(ngModel)]="visaForm.payment_reference"  name="payment method" value="offline">offline<br><br>
+             </div>
+             <div>
+                  <label>relational status:</label><br>
+                  <input type="radio" [(ngModel)]="visaForm.relational_status" name="relational status" value="single">single 
+                  <input type="radio" [(ngModel)]="visaForm.relational_status" name="relational status" value="multilple">married<br><br>
+             </div>
+             <div>
+                  <label>another email: </label>
+                  <input type="text" [(ngModel)]="visaForm.another_email" class="form-control" name="another_email" placeholder="another email:"> <br>
+             </div>
+
+              <div>
+                  <label>date of birth: </label>
+                  <input type="text" [(ngModel)]="visaForm.date_of_birth" class="form-control" name="date_of_birth" placeholder="date of birth"><br>
+              </div>
+              <div>
+                  <label>duration of visa: </label>
+                  <input type="text" [(ngModel)]="visaForm.duration_of_visa" name="duration_of_visa" class="form-control" placeholder="duration of visa"><br>
+              </div>
+              <div>
+                  <label>date of departure: </label>
+                  <input type="text" [(ngModel)]="visaForm.date_of_departure" class="form-control" name="date_of_departure" placeholder="date of departure:"><br>
+
+              </div>
+              <div>
+                  <label>date of arrival: </label>
+                  <input type="text" [(ngModel)]="visaForm.date_of_arrival" class="form-control" name="date_of_arrival" placeholder="date of arrival:"><br>
+            </div>
+            <div>
+                  <label>issue date:</label>
+                  <input type="text" [(ngModel)]="visaForm.issue_date" class="form-control" name="issue_date" placeholder="issue date:"><br>
+            </div>
+            <div>
+                  <label>expiry date: </label>
+                  <input type="text" [(ngModel)]="visaForm.expiry_date" class="form-control" name="expiry_date" placeholder="expiry date"><br>
+            </div>
+                     
+              
+
+      <button type="submit" value="onSUbmit()">submit</button><br>
+
+      
+</form>
+
+

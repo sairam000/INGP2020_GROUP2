@@ -1,0 +1,51 @@
+<h1 style="text-align: center;">apply visa in online</h1>
+ <a routerLink="/add-user">Apply for visa</a><br>
+
+<style>
+   table,tr,th,td {
+      border:2px solid black;
+   }
+</style>
+<table>
+   <tr>
+         <th>id</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>gender</th>
+         <th>passport_number</th>
+         <th>country_of_nationality</th>
+         <th>type_of_visa_application</th>
+         <th>total_fee</th>
+         <th>contact_language</th>
+         <th>payment_reference</th>
+         <th>relational_status</th>
+         <th>another_email</th>
+         <th>date_of_birth</th>
+         <th>date_of_departure</th>
+         <th>date_of_arrival</th>
+         <th>issue_date</th>
+         <th>expiry_date</th>
+
+   </tr>
+   <tr *ngFor="let form of visaForms;" >
+      <td>{{form.id}}</td>
+      <td >{{form.name}}</td>
+      <td>{{form.email}}</td>
+      <td>{{form.gender}}</td>
+      <td>{{form.passport_number}}</td>
+      <td>{{form.country_of_nationality}}</td>
+      <td>{{form.type_of_visa_application}}</td>
+      <td>{{form.total_fee}}</td>
+      <td>{{form.contact_language}}</td>
+      <td>{{form.payment_reference}}</td>
+      <td>{{form.relational_status}}</td>
+      <td>{{form.another_email}}</td>
+      <td>{{form.date_of_birth}}</td>
+      <td>{{form.date_of_departure}}</td>
+      <td>{{form.date_of_arrival}}</td>
+      <td>{{form.issue_date}}</td>
+      <td>{{form.expiry_date}}</td>
+   
+</tr>
+
+</table>
