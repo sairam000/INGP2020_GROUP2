@@ -1,0 +1,88 @@
+
+   <h1 style="text-align: center;">visa Application</h1>
+
+<!-- <head>
+   <style>
+   a:link, a:visited {
+     background-color: #365cf4;
+     color: white;
+     padding: 2px 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+   }
+   
+   a:hover, a:active {
+     background-color: black;
+   }
+   </style>
+   </head>
+
+ <a  href="default.asp" target="_blank" routerLink="/add-user"><h2>Apply for visa</h2></a><br> -->
+ 
+
+
+<style>
+   table,tr,th,td {
+      border:2px solid black;
+   }
+</style>
+<h2>list of visa applicationss</h2>
+<table>
+   <tr>
+         <th>id</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>gender</th>
+         <th>password</th>
+         <th>passport_number</th>
+         <th>country_of_nationality</th>
+         <th>type_of_visa_application</th>
+         <th>total_fee</th>
+         <th>contact_language</th>
+         <th>payment_reference</th>
+         <th>relational_status</th>
+         <th>another_email</th>
+         <th>date_of_birth</th>
+         <th>date_of_departure</th>
+         <th>date_of_arrival</th>
+         <!-- <th>issue_date</th> -->
+         <th>expiry_date</th>
+         <th>duration_of_visa</th>
+
+         <th>Uk_driving_licence</th>
+         <th>Address</th>
+         <th>identity_number</th>
+         <th>family_in_uk</th>
+         <th>Any_other_nationality</th>
+        
+   </tr>
+   <tr *ngFor="let form of visaForms;" >
+      <td>{{form.id}}</td>
+      <td >{{form.name}}</td>
+      <td>{{form.email}}</td>
+      <td>{{form.gender}}</td>
+      <td>{{form.password}}</td>
+      <td>{{form.passportNumber}}</td>
+      <td>{{form.countryOfNationality}}</td>
+      <td>{{form.typeOfVisaApplication}}</td>
+      <td>{{form.totalFee}}</td>
+      <td>{{form.contactLanguage}}</td>
+      <td>{{form.paymentReference}}</td>
+      <td>{{form.relationalStatus}}</td>
+      <td>{{form.anotherEmail}}</td>
+      <td>{{form.dateOfBirth}}</td>
+      <td>{{form.dateOfDeparture}}</td>
+      <td>{{form.dateOfArrival}}</td>
+      <!-- <td>{{form.issueDate}}</td> -->
+      <td>{{form.expiryDate}}</td>
+      <td>{{form.durationOfVisa}}</td>
+      <td>{{form.ukDrivingLicence}}</td>
+      <td>{{form.address}}</td>
+      <td>{{form.identityNumber}}</td>
+      <td>{{form.familyInUk}}</td>
+      <td>{{form.anyOtherNationality}}</td>
+   
+</tr>
+
+</table>
