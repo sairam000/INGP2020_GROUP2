@@ -1,0 +1,30 @@
+<div class="bg-img">
+<div  class="container">
+  <h1 style="background-color:#b0bfe6; text-align: center;">Track Details</h1>
+    <form #loginform="ngForm"(ngSubmit)="LoginUser()">
+      {{loginform.form.valid}}
+      <small>{{msg}}</small>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="visaForm.email" placeholder="Enter email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+        <small class="text-danger" *ngIf="email.errors.required">email is required</small>
+        <small class="text-danger" *ngIf="email.errors.pattern">enter the valid email</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="visaForm.password" placeholder="Enter password" name="password" required #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched">
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required</small>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      <button type="submit" [disabled]="loginform.form.invalid" class="btn btn-info">login</button>
+      <a class="float-right" routerLink="/add-user">new user? Apply For visa</a>
+    </form>
+  </div>
+</div>
