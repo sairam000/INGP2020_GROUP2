@@ -1,0 +1,172 @@
+<h1 style="background-color:#b0bfe6; text-align: center;">visa application Form </h1>
+  <div class="bg-img">
+<form  #registerform="ngForm" class="container" (ngSubmit)="onSubmit()">
+    {{registerform.form.valid}}
+    <!-- #registerform="ngForm"   -->
+  
+
+
+        <div>
+        <label>Applicant Name:</label>
+        <input type="text" class="form-control" name="Name" [(ngModel)]="visaForm.name" placeholder="Name"
+        required #name="ngModel"
+            [class.is-invalid]="name.invalid && name.touched">
+            <small class="text-danger" [class.d-none]="name.valid || name.untouched">name is required</small>
+ </div>
+
+         <div>
+        <label >email:</label>
+        <input type="email" name="Email"  class="form-control" [(ngModel)]="visaForm.email" placeholder="email"
+        required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+        <small class="text-danger" *ngIf="email.errors.required">email is required</small>
+        <small class="text-danger" *ngIf="email.errors.pattern">enter the valid email</small>
+        </div>
+         </div>
+         <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" [(ngModel)]="visaForm.password"    placeholder="Enter password" name="password" 
+            required #password="ngModel"
+            [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required</small>
+         </div>
+         
+         <div>
+         <label>gender:</label><br>
+            <input type="radio" name="gender" [(ngModel)]="visaForm.gender"    value="male"> male
+            <input type="radio" name="gender" [(ngModel)]="visaForm.gender"  value="female"> Female<br><br>
+         </div>
+
+             <div>
+                  <label>Passport number:</label>
+                  <input type="text"  [(ngModel)]="visaForm.passportNumber"  class="form-control"name="passportNumber" placeholder="passport number" 
+                  required #passportNumber="ngModel"
+            [class.is-invalid]="passportNumber.invalid && passportNumber.touched">
+            <small class="text-danger" [class.d-none]="passportNumber.valid || passportNumber.untouched">passportNumber is required</small><br>
+              </div>
+              <div>
+                  <label>Country of nationality:</label>
+                  <input type="text" [(ngModel)]="visaForm.countryOfNationality" class="form-control" name="CountryOfNationality" placeholder="nationality" 
+                  required #countryOfNationality="ngModel"
+                  [class.is-invalid]="countryOfNationality.invalid && countryOfNationality.touched">
+                  <small class="text-danger" [class.d-none]="countryOfNationality.valid || countryOfNationality.untouched">this field is required</small><br>
+              </div>
+            
+                  <label>type of visa application: </label><br>
+                  <input type="radio" [(ngModel)]="visaForm.typeOfVisaApplication" name="TypeOfVisaApplication"  value="single type">single type
+                  <input type="radio" [(ngModel)]="visaForm.typeOfVisaApplication" name="TypeOfVisaApplication"  value="multilple type">multilple type<br><br>
+            
+              <div>
+                  <label>total fee: </label>
+                  <input type="text" [(ngModel)]="visaForm.totalFee" class="form-control" name="TotalFee" placeholder="total fee" 
+                  required #totalFee="ngModel"
+            [class.is-invalid]="totalFee.invalid && totalFee.touched">
+            <small class="text-danger" [class.d-none]="totalFee.valid || totalFee.untouched">this field is required</small><br>
+              </div>
+              <div>
+                  <label>contact language:</label>
+                  <input type="text" [(ngModel)]="visaForm.contactLanguage" class="form-control"  name="ContactLanguage" placeholder="language"
+                  required #contactLanguage="ngModel"
+            [class.is-invalid]="contactLanguage.invalid && contactLanguage.touched">
+            <small class="text-danger" [class.d-none]="contactLanguage.valid || contactLanguage.untouched">this field is required</small><br>
+
+              </div>
+              <div>
+                  <label>payment reference:</label><br>
+                  <input type="radio" [(ngModel)]="visaForm.paymentReference" name="PaymentReference" value="online">online
+                  <input type="radio" [(ngModel)]="visaForm.paymentReference"  name="PaymentReference" value="offline">offline<br><br>
+             </div>
+             <div>
+                  <label>relational status:</label><br>
+                  <input type="radio" [(ngModel)]="visaForm.relationalStatus" name="RelationalStatus" value="single">single 
+                  <input type="radio" [(ngModel)]="visaForm.relationalStatus" name="RelationalStatus" value="multilple">married<br><br>
+             </div>
+             <div>
+                  <label>another email: </label>
+                  <input type="email" [(ngModel)]="visaForm.anotherEmail" class="form-control" name="AnotherEmail" placeholder="another email:"
+                  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                #anotherEmail="ngModel"
+                [class.is-invalid]="anotherEmail.invalid && anotherEmail.touched">
+                <div *ngIf="anotherEmail.errors && (anotherEmail.invalid && anotherEmail.touched)">
+                <small class="text-danger" *ngIf="anotherEmail.errors.required">Email is required</small>
+                <small class="text-danger" *ngIf="anotherEmail.errors.pattern">enter the valid email</small>
+                </div> <br>
+             </div>
+
+              <div>
+                  <label>date of birth: </label>
+                  <input type="date" [(ngModel)]="visaForm.dateOfBirth" class="form-control" name="DateOfBirth" placeholder="date of birth"><br>
+              </div>
+              <div>
+                  <label>duration of visa: </label>
+                  <input type="text" [(ngModel)]="visaForm.durationOfVisa" name="DurationOfVisa" class="form-control" placeholder="duration of visa"
+                  required #durationOfVisa="ngModel"
+            [class.is-invalid]="durationOfVisa.invalid && durationOfVisa.touched">
+            <small class="text-danger" [class.d-none]="durationOfVisa.valid || durationOfVisa.untouched">this field is required</small><br>
+              </div>
+              <div>
+                <label>Date you plan to Arrive the UK : </label>
+                <input type="date" [(ngModel)]="visaForm.dateOfArrival" class="form-control" name="DateOfArrival" placeholder="date of arrival:"><br>
+          </div>
+              <div>
+                  <label>Date you plan to leave the UK :</label>
+                  <input type="date" [(ngModel)]="visaForm.dateOfDeparture" class="form-control" name="DateOfDeparture" placeholder="date of departure:"><br>
+
+              </div>
+            
+            <!-- <div>
+                  <label>Passport Issue Date :</label>
+                  <input type="date" [(ngModel)]="visaForm.issueDate" class="form-control" name="IssueDate" placeholder="issue date:"><br>
+            </div> -->
+            <div>
+                  <label>Passport Expiry Date :</label>
+                  <input type="date" [(ngModel)]="visaForm.expiryDate" class="form-control" name="ExpiryDate" placeholder="expiry date"><br>
+            </div>
+            <!-- <div class="form-group">
+                <label for="purposeOfVisa">Purpose Of Visa:</label>
+                <input type="text" class="form-control" id="purposeOfVisa" [(ngModel)]="visaForm.purposeOfVisa" placeholder="Enter Purpose Of Visa" name="purposeOfVisa">
+              </div> -->
+
+         
+            <div>
+                <label>Do you have a UK driving licence?:</label><br>
+                <input type="radio" name="driving licence"  [(ngModel)]="visaForm.ukDrivingLicence" value="yes" >yes
+                <input type="radio" name="driving licence"  [(ngModel)]="visaForm.ukDrivingLicence" value="no">No
+            </div>
+            
+            <div><label for="address">Address:</label>
+                <input type="text" id="address"class="form-control" [(ngModel)]="visaForm.address" name="address"
+                required #address="ngModel"
+            [class.is-invalid]="address.invalid && address.touched">
+            <small class="text-danger" [class.d-none]="address.valid || address.untouched">address is required</small><br>
+            </div>
+           
+            <div>
+                <label>Do you currently hold, or have you ever held, any other nationality or citizenship?</label>
+                <input type="radio" name="any other citizenship" [(ngModel)]="visaForm.anyOtherNationality" value="yes">yes
+                <input type="radio" name="any other citizenship" [(ngModel)]="visaForm.anyOtherNationality" value="No">no
+            </div>
+            <div>
+                <label for="identityNumber">National identity card number</label>
+                <input type="text" id="identityNumber" class="form-control" [(ngModel)]="visaForm.identityNumber" name="identityNumber"
+                required #identityNumber="ngModel"
+            [class.is-invalid]="identityNumber.invalid && identityNumber.touched">
+            <small class="text-danger" [class.d-none]="identityNumber.valid || identityNumber.untouched">this field is required</small> <br>
+            </div>
+            <div><label>Do You have any family in the UK ?</label><br>
+                <input type="radio" [(ngModel)]="visaForm.familyInUk" name="yes" value="yes">yes
+                <input type="radio"  [(ngModel)]="visaForm.familyInUk" name="no" value="no">no <br>
+            </div> <br>
+  
+                     
+              
+
+      <button type="submit" value="onSUbmit()" [disabled]="registerform.form.invalid" class="btn"><h4>submit</h4></button><br>
+
+      
+</form>
+</div>
+<!-- </div> -->
+<!-- [disabled]="registerform.form.invalid" -->

@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-img {
+
+    background-image: url("https://cdn.hipwallpaper.com/m/62/74/BoK1ve.jpg");
+  
+    min-height: 220px;
+  
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  
+  .container {
+    position: absolute;
+    right: 100;
+    margin: 10px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+  }
+  input[type=email], input[type=text]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  input[type=email]:focus, input[type=text]:focus{
+
+  background-color: #ddd;
+  outline: none;
+  }
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }

@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-img {
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRqSSTQhK5Y7Te9gK9D5w5syUMQtGP1HAMbCg&usqp=CAU");
+  
+    min-height: 2200px;
+  
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  
+  .container {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    max-width: 500px;
+    padding: 16px;
+    background-color: white;
+  }
+  input[type=text], input[type=email],input[type=text],input[type=text],input[type=text],input[type=text],input[type=text],input[type=text],input[type=text],input[type=text],input[type=text],input[type=email],input[type=date], input[type=text],input[type=date],input[type=date],input[type=date],input[type=date],input[type=text],input[type=text],input[type=text],input[type=text],input[type=text],input[type=text]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  input[type=text]:focus, input[type=email]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=email]:focus,input[type=date]:focus, input[type=text]:focus,input[type=date]:focus,input[type=date]:focus,input[type=date],input[type=date]:focus,input[type=text],input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus,input[type=text]:focus{
+
+  background-color: #ddd;
+  outline: none;
+  }
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
